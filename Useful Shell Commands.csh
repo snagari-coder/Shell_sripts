@@ -13,3 +13,6 @@ To find some files and then copy those files into a directory
 
 To find the word “a12345” in files in a directory and its subdirectory
 % find /path/where/you/want/to/search -type f | xargs grep "a12345"
+
+To print the 6th word in each line starting with c:
+awk '{print $6}' fileName.txt | grep -E '\bc' >! output.txt
