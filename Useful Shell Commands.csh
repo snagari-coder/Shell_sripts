@@ -59,7 +59,14 @@ a\?b -- zero or one a followed by b --- ab,b
 a\+b -- one or more a followed by b --- ab,aab
 .* --- all chars including space
 .\+ --- all chars excluding space
+=============================================================================================
 
+sed -i 's/^/#/g' file.txt ---> inserts # in the begining of each line and does the change in the file.
+sed -i 's/^#//g' file.txt ---> removes # from the begining of each line
+sed -i 's/^/ /g' file.txt ---> inserts space in the begining of each line
+sed -i 's/^ //g' file.txt ---> removes 1 space from the begining of each line
+sed -i 's/^\ *//g' file.txt ---> removes any number of space in the begining of each line
+sed -i '2,4s/^/#/g' file.txt ---> inserts # in the begining of lines from 2 to 4
 
 https://www.gnu.org/software/sed/manual/sed.html#Other-Commands
 https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php
